@@ -16,37 +16,45 @@ function getComputerChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
+    let result = ""
+
     if (playerChoice === 'paper') {
         if (computerChoice === "paper") {
-            return "It's a draw!";
+            result = "It's a draw!";
+
         } else if (computerChoice === 'scissors') {
-            return "You lose!, Scissors beats Paper";
+            result = "You lose!, Scissors beats Paper";
         } else if (computerChoice === "rock") {
-            return "You win!, Paper beats Rock";
+            result = "You win!, Paper beats Rock";
         }
     }
     if (playerChoice === "scissors") {
         if (computerChoice === "paper") {
-            return "You win!, Scissors beats Paper";
+            result = "You win!, Scissors beats Paper";
         } else if (computerChoice === 'scissors') {
-            return "It's a draw!";
+            result = "It's a draw!";
         } else if (computerChoice === "rock") {
-            return "You lose!, Rock beats Scissors";
+            result = "You lose!, Rock beats Scissors";
         }
     }
     if (playerChoice === "rock") {
         if (computerChoice === "paper") {
-            return "You lose!, Paper beats Rock";
+            result = "You lose!, Paper beats Rock";
         } else if (computerChoice === 'scissors') {
-            return "You win!, Rock beats Scissors";
+            result = "You win!, Rock beats Scissors";
         } else if (computerChoice === "rock") {
-            return "It's a draw!";
+            result = "It's a draw!";
         }
     }
+    playerChoice = null;
+    return result
 }
 
 function game() {
     let count = 0;
 
+    if (count < 5) {
+
+    }
 
 }

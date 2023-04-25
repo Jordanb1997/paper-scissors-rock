@@ -1,6 +1,5 @@
 //choices
 let playerChoice;
-let computerChoice;
 //score
 let playerScore = 0;
 let computerScore = 0;
@@ -39,6 +38,15 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
-function game() {
-
+function game(playerChoice) {
+    if (playerScore < 5 || computerScore < 5) {
+        let computerChoice = getComputerChoice();
+        playRound(playerChoice, computerChoice);
+    } else {
+        if (playerScore === 5) {
+            gameWinner = "Player Wins!"
+        } else {
+            gameWinner = "Computer Wins!";
+        }
+    }
 }

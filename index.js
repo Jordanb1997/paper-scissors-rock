@@ -1,18 +1,21 @@
 let playerChoice;
 let computerChoice;
+let playerScore;
+let computerScore;
 
 function getComputerChoice() {
     let rng = Math.floor(Math.random() * 3);
     let choice;
 
-    if (rng === 0) {
-        choice = "paper";
-    } else if (rng === 1) {
-        choice = "scissors";
-    } else if (rng === 2) {
-        choice = "rock";
+    switch (rng) {
+        case 0:
+            return "paper";
+        case 1:
+            return "scissors"
+        case 2:
+            return "rock"
+
     }
-    return choice;
 }
 
 function playRound(playerChoice, computerChoice) {

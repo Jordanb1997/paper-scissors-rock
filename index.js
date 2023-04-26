@@ -39,14 +39,18 @@ function playRound(playerChoice, computerChoice) {
 }
 
 function game(playerChoice) {
-    if (playerScore < 5 || computerScore < 5) {
+    let winner = document.getElementById('winner');
+
+    if (playerScore < 5 && computerScore < 5) {
         let computerChoice = getComputerChoice();
         playRound(playerChoice, computerChoice);
     } else {
         if (playerScore === 5) {
-            gameWinner = "Player Wins!"
+            gameWinner = "Player Wins!";
+            winner.textContent = "Player Wins!";
         } else {
             gameWinner = "Computer Wins!";
+            winner.textContent = "Computer Wins!";
         }
     }
 }
@@ -57,4 +61,11 @@ function updateScore() {
 
     player.textContent = "Player Score: " + playerScore;
     computer.textContent = "Computer Score: " + computerScore;
+}
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    updateScore();
+    winner.textContent = "";
 }

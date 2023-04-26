@@ -1,11 +1,10 @@
-//choices
-let playerChoice;
 //score
 let playerScore = 0;
 let computerScore = 0;
 let roundWinner = "";
 let gameWinner = "";
 
+//game
 function getComputerChoice() {
     let rng = Math.floor(Math.random() * 3);
 
@@ -36,6 +35,7 @@ function playRound(playerChoice, computerChoice) {
         roundWinner = "Computer wins!"
         computerScore++;
     }
+    updateScore();
 }
 
 function game(playerChoice) {
@@ -49,4 +49,12 @@ function game(playerChoice) {
             gameWinner = "Computer Wins!";
         }
     }
+}
+
+function updateScore() {
+    let player = document.getElementById('playerScore');
+    let computer = document.getElementById('computerScore');
+
+    player.textContent = "Player Score: " + playerScore;
+    computer.textContent = "Computer Score: " + computerScore;
 }

@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcf5e5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scores{
+    width: 15em;
+    padding: 1em;
+    display: inherit;
+    justify-content: space-between;
+}
+
+.selection {
+    display: block;
+    padding: 2em;
+}
+
+.button {
+    background-color: #f9f8fa;
+    font-size: 35px;
+    width: 3.5em;
+    height: 3.5em;
+}
+
+.endGame{
+    display: inherit;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.resetButton{
+    margin-top: 1em;
+}

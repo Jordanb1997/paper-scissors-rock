@@ -16,19 +16,14 @@
     </div>
 
     <div class="selection">
-        <input type="button" name="paper" value="paper" onclick="game('paper')">
-        <input type="button" name="scissors" value="scissors" onclick="game('scissors')">
-        <input type="button" name="rock" value="rock" onclick="game('rock')">
-    </div>
-
-    <div class="lastRound">
-        <div class="playerChoice">You Chose: </div>
-        <div class="computerChoice">Computer Chose:</div>
+        <input class="button hand" type="button" name="paper" value="&#9995" onclick="game('paper')">
+        <input class="button hand" type="button" name="scissors" value="&#9996" onclick="game('scissors')">
+        <input class="button hand" type="button" name="rock" value="&#9994" onclick="game('rock')">
     </div>
 
     <div id="endGame" class="endGame">
         <div id="winner"></div>
-        <input type="button" name="reset" value="Reset" onclick="resetGame()">
+        <input class="button resetButton" type="button" name="reset" value="Reset" onclick="resetGame()">
     </div>
 </body>
 </html>

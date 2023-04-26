@@ -19,6 +19,9 @@ function getComputerChoice() {
 }
 
 function playRound(playerChoice, computerChoice) {
+    let playerHand = document.getElementById('playerChoice');
+    let computerHand = document.getElementById('computerChoice');
+
     if (playerChoice === computerChoice) {
         roundWinner = "It's a draw";
     } if (playerChoice === "paper" && computerChoice === "rock" ||
@@ -41,7 +44,7 @@ function playRound(playerChoice, computerChoice) {
 function game(playerChoice) {
     let winner = document.getElementById('winner');
 
-    if (playerScore < 5 && computerScore < 5) {
+    if (playerScore <= 4 && computerScore <= 4) {
         let computerChoice = getComputerChoice();
         playRound(playerChoice, computerChoice);
     } else {
